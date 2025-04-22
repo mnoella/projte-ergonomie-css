@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrairieEnLigne - Découvrez notre sélection de livres</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="catalogue-page">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="/img/logo.png" alt="Librairie en ligne Logo" height="70">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogue.html">Catalogue</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collections</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Romans</a></li>
+                                <li><a class="dropdown-item" href="#">Science-Fiction</a></li>
+                                <li><a class="dropdown-item" href="#">Policier</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Toutes les collections</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forum.html">Forum</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Rechercher un livre ..." aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Favoris">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Panier">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-user me-1"></i>Connexion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fil d'Ariane -->
+    <div class="bg-light py-2 breadcrumb-container">
+        <div class="container">
+            <nav arial-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Catalogue</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Filtres -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Filtres</h5>
+
+                            <!-- Recherche -->
+                            <div class="mb-4">
+                                <label for="searchFilter" class="form-label">Recherche</label>
+                                <input type="text" class="form-control" id="searchFilter" placeholder="Titre, auteur...">
+                            </div>
+
+                            <!-- Filtre par genre-->
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Genre</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="genreRoman">
+                                    <label class="form-check-label" for="genreRoman">Roman</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="genreSF">
+                                    <label class="form-check-label" for="genreSF">Science-Fiction</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="genrePolicier">
+                                    <label class="form-check-label" for="genrePolicier">Policier</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="genreFantasy">
+                                    <label class="form-check-label" for="genreFantasy">Fantasy</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="genreBiographie">
+                                    <label class="form-check-label" for="genreBiographie">Biographie</label>
+                                </div>
+                            </div>
+
+                            <!-- Filtre par prix -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Prix</h6>
+                                <div class="range">
+                                    <input type="range" class="form-range" min="0" max="50" step="5" id="priceRange">
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>0 €</span>
+                                    <span id="priceValue">25 €</span>
+                                    <span>50 €</span>
+                                </div>
+                            </div>
+
+                            <!-- Filtre par note -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Note minimale</h6>
+                                <div class="rating">
+                                    <div class="btn-group" role="group" aria-label="Note minimale">
+                                        <button type="button" class="btn btn-outline-warning btn-sm" data-rating="1"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm" data-rating="2"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm" data-rating="3"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm" data-rating="4"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm" data-rating="5"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boutons -->
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="button">Appliquer les filtres</button>
+                                <button class="btn btn-secondary" type="button">Réinitialiser</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Résultats de recherche -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h4 mb-0">Tous les livres</h2>
+                        <div class="d-flex align-items-center">
+                            <select class="form select">
+                                <option selected>Trier par</option>
+                                <option value="1">Popularité</option>
+                                <option value="2">Prix croissant</option>
+                                <option value="3">Prix décroissant</option>
+                                <option value="4">Date de parution</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Filtres 'rapides' -->
+                    <div class="mb-4">
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="btn btn-sm btn-primary filter-btn active" data-category="Tous" onclick="filterBooks('Tous')">Tous</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn" data-category="Romans" onclick="filterBooks('Romans')">Romans</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn" data-category="Science-Fiction" onclick="filterBooks('Science-Fiction')">Science-Fiction</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn" data-category="Policier" onclick="filterBooks('Policier')">Policier</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn" data-category="Fantasy" onclick="filterBooks('Fantasy')">Fantasy</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn" data-category="Biographie" onclick="filterBooks('Biographie')">Biographie</button>
+                        </div>
+                    </div>
+
+                    <!-- Grille livres-->
+                    <div class="row books-container g-4">
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Suivant</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="../img/logo.png" alt="LibrairieEnLigne Logo" class="mb-3">
+                    <p>Découvrez notre sélection de livres et profitez d'une expérience de lecture unique sur tous vos appareils.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Navigations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li class="mb-2"><a href="catalogue.html" class="text-white text-decoration-none">Catalogue</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Collections</a></li>
+                        <li class="mb-2"><a href="forum.html" class="text-white text-decoration-none">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">À propos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">CGV</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Confidentialité</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Inscrivez-vous pour recevoir nos nouveautés et offres spéciales.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Email" aria-describedby="button-newsletter">
+                            <button class="btn btn-accent" type="button" id="button-newsletter">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy;2025 LibrairieEnLigne. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Conçu pour les amoureux de la lecture</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

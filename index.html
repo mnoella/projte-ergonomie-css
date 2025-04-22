@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrairieEnLigne - Découvrez notre sélection de livres</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/logo.png" alt="Librairie en ligne Logo" height="70">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/catalogue.html">Catalogue</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collections</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Romans</a></li>
+                                <li><a class="dropdown-item" href="#">Science-Fiction</a></li>
+                                <li><a class="dropdown-item" href="#">Policier</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Toutes les collections</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/forum.html">Forum</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Rechercher un livre ..." aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Favoris">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Panier">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-user"></i>Connexion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <section class="hero-banner bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-3">Découvrez notre livre gratuit du mois</h1>
+                    <p class="lead mb-4">Plongez dans l'univers captivant de "Les Misérables" par Victor Hugo, offert gratuitement ce mois-ci à tous nos membres</p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="btn btn-accent btn-lg me-2 mb-2">Télécharger gratuitement</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg mb-2">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/img/victor_hugo.png" alt="Livre du mois" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Livres du moment-->
+    <section class="py-5">
+        <div class="container position-relative">
+            <h2 class="section-title mb-4"> Livres du moment</h2>
+            <div id="carouselBooks" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/fred_vargas.png" class="card-img-top" alt="Livre 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dans les bois éternels</h5>
+                                        <p class="card-text">Fred Vargas</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">19.99€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/jean_riviere.png" class="card-img-top" alt="Livre 2">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">La vie simple</h5>
+                                        <p class="card-text">Jean Rivière</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">22.50€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/alain_damasio.png" class="card-img-top" alt="Livre 3">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">La Horde du Contrevent</h5>
+                                        <p class="card-text">Alain Damasio</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">18.75€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/john_berendt.png" class="card-img-top" alt="Livre 4">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Minuit dans le jardin du bien et du mal</h5>
+                                        <p class="card-text">John Berendt</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">24.99€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/joel_dicker.png" class="card-img-top" alt="Livre 5">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">L'énigme de la chambre 622</h5>
+                                        <p class="card-text">Joël Dicker</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">17.99€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card h-100">
+                                    <div class="img-container">
+                                        <img src="/img/alexiane_lys.png" class="card-img-top" alt="Livre 6">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Les Ailes d'Emeraude</h5>
+                                        <p class="card-text">Alexiane de Lys</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">21.50€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/kate_morton.png" class="card-img-top" alt="Livre 7">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Le Jardin des Secrets</h5>
+                                        <p class="card-text">Kate Morton</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">19.25€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card book-card">
+                                    <div class="img-container">
+                                        <img src="/img/jp_dubois.png" class="card-img-top" alt="Livre 8">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tous les hommes n'habitent pas ...</h5>
+                                        <p class="card-text">Jean-Paul Dubois</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold">23.99€</span>
+                                            <button class="btn btn-sm btn-primary">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselBooks" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselBooks" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Catégories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Explorez nos catégories</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/roman.png" alt="Romans">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Romans</h3>
+                            <p class="category-count">Plus de 500 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/sci-fi.png" alt="Science-Fiction">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Science-Fiction</h3>
+                            <p class="category-count">Plus de 300 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/policier.png" alt="Policier">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Policier</h3>
+                            <p class="category-count">Plus de 400 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/jeunesse.png" alt="Jeunesse">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Jeunesse</h3>
+                            <p class="category-count">Plus de 350 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/biographie.png" alt="Biographies">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Biographies</h3>
+                            <p class="category-count">Plus de 250 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="/img/manga.png" alt="Manga">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Manga</h3>
+                            <p class="category-count">Plus de 200 titres</p>
+                            <a href="#" class="btn category-btn">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      <!-- Services -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nos services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-primary bg-opacity-10 p-3 rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-book fa-2x"></i>
+                        </div>
+                        <h3 class="h5">Livre gratuit mensuel</h3>
+                        <p class="text-muted">Chaque mois, découvrez un nouveau livre offert à tous nos membres.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-primary bg-opacity-10 p-3 rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                        </div>
+                        <h3 class="h5">Lecture multi-supports</h3>
+                        <p class="text-muted">Lisez bos livres sur smartphone, tablette ou ordinateur, où que vous soyez et à tout moment.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon bg-primary bg-opacity-10 p-3 rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-comments fa-2x"></i>
+                        </div>
+                        <h3 class="h5">Communauté active</h3>
+                        <p class="text-muted">Echangez avec d'autres lecteurs et partager vos avis sur vos lectures préférées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Témoignages -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Ce que disent nos lecteurs</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Une expérience de lecture incroyable ! J'adore pouvoir lire mes livres sur tous mes appareils et le livre gratuit mensuel est une excellente initiative."</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex align-items-center">
+                                <img src="/img/woman-avatar.png" class="rounded-circle me-3" alt="Sophie D.">
+                                <div>
+                                    <h6 class="mb-0">Sophie D.</h6>
+                                    <small class="text-muted">Membre depuis 2 ans</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Le forum est vraiment actif et j'ai découvert de nombreux livres grâce aux recommandations des autres membres. Une vraie communauté de passionés !"</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex align-items-center">
+                                <img src="/img/man-in-suit-and-tie.png" class="rounded-circle me-3" alt="Thomas M.">
+                                <div>
+                                    <h6 class="mb-0">Thomas M.</h6>
+                                    <small class="text-muted">Membre depuis 1 an</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Interface intuitive et catalogue très fourni. J'apprécie particulièrement la possibilité de suggérer des livres qui ne sont pas encore disponible."</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex align-items-center">
+                                <img src="/img/woman-avatar.png" class="rounded-circle me-3" alt="Marie L.">
+                                <div>
+                                    <h6 class="mb-0">Marie L.</h6>
+                                    <small class="text-muted">Membre depuis 6 mois</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Actions -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="fw-bold">Rejoignez notre communauté de lecteurs</h2>
+                    <p class="lead mb-0">Inscrivez-vous dès maintenant et recevez votre premier livre gratuit !</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#" class="btn btn-light btn-lg">S'inscrire gratuitement</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="/img/logo.png" alt="LibrairieEnLigne Logo" class="mb-3">
+                    <p>Découvrez notre sélection de livres et profitez d'une expérience de lecture unique sur tous vos appareils.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Navigations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li class="mb-2"><a href="./html/catalogue.html" class="text-white text-decoration-none">Catalogue</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Collections</a></li>
+                        <li class="mb-2"><a href="./html/forum.html" class="text-white text-decoration-none">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">À propos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">CGV</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Confidentialité</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Inscrivez-vous pour recevoir nos nouveautés et offres spéciales.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Email" aria-describedby="button-newsletter">
+                            <button class="btn btn-accent" type="button" id="button-newsletter">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy;2025 LibrairieEnLigne. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Conçu pour les amoureux de la lecture !</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- // Bootstrap JS Bundle //-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

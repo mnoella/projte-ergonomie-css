@@ -1,0 +1,8 @@
+amazon
+kobo
+goodreads
+bookshop
+fnac
+librinova
+wattpad
+scribd

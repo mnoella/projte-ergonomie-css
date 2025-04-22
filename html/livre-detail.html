@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrairieEnLigne - Découvrez notre sélection de livres</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="/placeholder.svg?height=40&width=120" alt="Librairie en ligne Logo" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogue.html">Catalogue</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collections</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Romans</a></li>
+                                <li><a class="dropdown-item" href="#">Science-Fiction</a></li>
+                                <li><a class="dropdown-item" href="#">Policier</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Toutes les collections</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forum.html">Forum</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Rechercher un livre ..." aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Favoris">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary me-2" data-bs-toggle="tooltip" title="Panier">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-user me-1"></i>Connexion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fil d'Ariane -->
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="catalogue.html">Catalogue</a></li>
+                    <li class="breadcrumb-item"><a href="#">Romans</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Le Silence des Ombres</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <main class="py-5">
+        <div class="container">
+            <section class="mb-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="/placeholder.svg?height=600&width=400" alt="Le Silences des Ombres" class="img-fluid rounded shadow">
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h1 class="mb-2">Le Silence des Ombres</h1>
+                        <p class="lead mb-2">Par <a href="#" class="text-decoration-none">Marie Dumont</a></p>
+                        
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-2">Roman</span>
+                            <span class="badge bg-secondary me-2">Thriller</span>
+                            <span class="badge bg-secondary">Suspense</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-2">4.5/5 (128 avis)</span>
+                        </div>
+
+                        <div class="mb-4">
+                            <h3 class="h5">Disponibilité :</h3>
+                            <div class="d-flex flex-wrap gap-3 mb-3">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="format" id="formatPapier" checked>
+                                    <label for="formatPapier" class="form-check-label">Version papier</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="format" id="formatEbook" checked>
+                                    <label for="formatEbook" class="form-check-label">E-book</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="format" id="formatAudio" checked>
+                                    <label for="formatAudio" class="form-check-label">Livre audio</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h3 class="h2 mb-3 text-primary">19.99 €</h3>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-primary"><i class="fas fa-shopping-cart me-2"></i> Ajouter au panier</button>
+                                <button class="btn btn-outline-primary"><i class="fas fa-heart me-2"></i> Ajouter aux favoris</button>
+                                <button class="btn btn-outline-secondary"><i class="fas fa-share-alt me-2"></i> Partager</button>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success d-flex align-items-center" role="alert">
+                            <i class="fas fa-truck me-2"></i>
+                            <div>
+                                Livraison gratuite à partir de 35 € d'achat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Description -->
+            <section class="mb-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h4 mb-4">Synopsis</h2>
+                        <p>Dans une petite ville côtière où le brouillard s'installe plus souvent que le soleil, Emma Delorme, journaliste d'investigation, revient sur les lieux de son enfance après quinze ans d'absence. La disparition mystérieuse de sa sœur cadette, restée sans réponse toutes ces années, la hante toujours.</p>
+                        <p>Alors qu'elle pensait simplement régler la succession de la maison familiale, Emma découvre un carnet caché dans le grenier, contenant des indices troublants sur ce qui s'est réellement passé cette nuit-là. Sa quête de vérité va réveiller de vieux secrets que certains habitants préféreraient voir rester dans l'ombre.</p>
+                        <p>Entre thriller psychologique et drame familial, "Le Silence des Ombres" explore les thèmes de la mémoire, du deuil et de la rédemption, dans une atmosphère où chaque personnage cache une part d'ombre.</p>
+
+                        <h3 class="h5 mt-4 mb-3">Détails</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Nombre de pages :</strong> 384</li>
+                                    <li class="mb-2"><strong>Éditeur :</strong> Éditions du Rivage</li>
+                                    <li class="mb-2"><strong>Date de publication :</strong> 15 mars 2023</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Langue :</strong> Français</li>
+                                    <li class="mb-2"><strong>ISBN :</strong> 978-2-1234-5678-9</li>
+                                    <li class="mb-2"><strong>Dimensions :</strong> 15.5 x 23 cm</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="h5 mt-4 mb-3">A propos de l'auteur</h3>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Marie Dumont" class="rounded-circle me-3" width="80" height="80">
+                            <div>
+                                <h4 class="h6 mb-1">Marie Dumont</h4>
+                                <p class="mb-0">Ancienne journaliste reconvertie dans l'écriture, Marie Dumont est l'auteure de plusieurs romans à succès. "Le Silence des Ombres" est son cinquième thriller.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extrait -->
+            <section class="mb-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h4 mb-4">Extrait du Livre</h2>
+                        <div class="bg-light p-4 rounded">
+                            <p class="fst-italic mb-0">Le brouillard s'était levé comme chaque soir, enveloppant la maison d'un linceul grisâtre. Emma regardait par la fenêtre, observant les lumières du phare qui balayaient l'horizon à intervalles réguliers. Quinze ans qu'elle n'avait pas vu ce spectacle, et pourtant, rien n'avait changé. Même la vieille horloge du salon continuait son tic-tac incessant, comme si le temps s'était figé depuis cette nuit-là.</p>
+                            <p class="fst-italic mb-0">Elle serra dans sa main le médaillon qu'elle avait retrouvé dans le grenier. Celui de sa sœur. Celui qu'elle portait le jour de sa disparition.</p>
+                            <p class="fst-italic mb-0">"Je trouverai ce qui t'est arrivé, Léa", murmura-t-elle. "Je te le promets."</p>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#extraitModal">
+                                Lire un extrait plus long
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Commentaires -->
+            <section>
+                <h2 class="section-title mb-4">Commentaire (128)</h2>
+
+                <!-- Ajout commentaires-->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-border">
+                        <h3 class="h5 mb-3">Ajouter un commentaire</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Votre note</label>
+                                <div class="rating-stars mb-2">
+                                    <i class="far fa-star fs-4 me-1"></i>
+                                    <i class="far fa-star fs-4 me-1"></i>
+                                    <i class="far fa-star fs-4 me-1"></i>
+                                    <i class="far fa-star fs-4 me-1"></i>
+                                    <i class="far fa-star fs-4"></i>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentTitle" class="form-label">Titre</label>
+                                <input type="text" class="form-control" id="commentTitle" placeholder="Titre de votre commentaire">
+                            </div>
+                            <div class="mb-3">
+                                <label for="commentContent" class="form-label">Commentaire</label>
+                                <textarea class="form-control" id="commentContent" rows="3" placeholder="Partagez votre avis sur ce livre ..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Publier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Commentaires existants-->
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Sophie D." class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h4 class="h6 mb-1">Sophie D</h4>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="ms-2 text-muted small">15 avril 2023</span>
+                                </div>
+                                <h5 class="h6 mb-2">Un thriller haletant !</h5>
+                                <p class="mb-0">J'ai lu ce livre en une journée ! L'intrigue est parfaitement ficelée, les personnages sont attachants et l'ambiance est prenante. Je recommande vivement !</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Thomas M." class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h4 class="h6 mb-1">Thomas M.</h4>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="ms-2 text-muted small">2 avril 2023</span>
+                                </div>
+                                <h5 class="h6 mb-2">Une belle découverte</h5>
+                                <p class="mb-0">Premier livre de Marie Dumont que je lis et je ne suis pas déçu. L'histoire est prenante et bien écrite. J'ai juste trouvé la fin un peu prévisible, d'où les 4 étoiles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Marie L.." class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h4 class="h6 mb-1">Marie L</h4>
+                                <div class="mb-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text warning"></i>
+                                    <span class="ms-2 text-muted small">28 mars 2023</span>
+                                </div>
+                                <h5 class="h6 mb-2">Captivant et émouvant</h5>
+                                <p class="mb-0">Ce livre m'a tenue en haleine du début à la fin. L'auteure a un vrai talent pour créer une atmosphère oppressante et des personnages complexes. J'ai particulièrement apprécié la relation entre Emma et son passé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Pagination commentaires -->
+                <nav aria-label="Pagination des commentaires" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="/placeholder.svg?height=40&width=120" alt="LibrairieEnLigne Logo" class="mb-3">
+                    <p>Découvrez notre sélection de livres et profitez d'une expérience de lecture unique sur tous vos appareils.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Navigations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li class="mb-2"><a href="catalogue.html" class="text-white text-decoration-none">Catalogue</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Collections</a></li>
+                        <li class="mb-2"><a href="forum.html" class="text-white text-decoration-none">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Informations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">À propos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">CGV</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Confidentialité</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Inscrivez-vous pour recevoir nos nouveautés et offres spéciales.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Email" aria-describedby="button-newsletter">
+                            <button class="btn btn-accent" type="button" id="button-newsletter">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 LibrairieEnLigne. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Conçu avec <i class="fas fa-heart text danger"></i> pour les amoureux de la lecture</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Bootstrap JS Bundle-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="../js/script.js"></script>
+</body>
+</html>
